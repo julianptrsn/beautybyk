@@ -74,14 +74,14 @@ p{margin:0}
 .site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(239,231,221,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:72px}
 .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
-.brand .mono{height:40px;width:auto}
-.brand .word{height:15px;width:auto}
+.brand .mono{height:48px;width:auto}
+.brand .word{height:22px;width:auto}
 .nav{display:flex;gap:28px;align-items:center}
 .nav a{text-decoration:none;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;font-weight:400}
 .nav a:not(.btn):hover{color:var(--taupe)}
 .nav .btn{min-height:42px;padding:0 20px}
 @media (max-width:920px){.nav a:not(.btn){display:none}}
-@media (max-width:520px){.brand .word{display:none}.nav .btn{display:none}}
+@media (max-width:520px){.brand .word{height:17px}.nav .btn{display:none}}
 
 /* Hero: ganzflächiges Leinenpapier mit großer Blindprägung, Inhalt zentriert */
 .hero{position:relative;overflow:hidden;display:grid;place-items:center;min-height:min(780px,calc(100svh - 72px));
@@ -297,8 +297,8 @@ html.legal-open{overflow:hidden}
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Bèauty by K – Startseite">
-      <img class="mono" src="media/monogramm.svg" alt="" width="40" height="54">
-      <img class="word" src="media/wortmarke.svg" alt="Bèauty by K" width="200" height="15">
+      <img class="mono" src="media/monogramm-header.svg" alt="" width="36" height="48">
+      <img class="word" src="media/wortmarke-header.svg" alt="Bèauty by K" width="290" height="22">
     </a>
     <nav class="nav" aria-label="Hauptnavigation">
       <a href="#behandlungen">Behandlungen</a>
