@@ -236,9 +236,14 @@ textarea{min-height:120px;resize:vertical}
 .check input{width:18px;height:18px;margin-top:4px;flex:none;accent-color:var(--espresso)}
 .hp{position:absolute;left:-9999px}
 .form-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
-.form-msg{font-size:.92rem}
-.form-msg[data-state="ok"]{color:var(--espresso)}
-.form-msg[data-state="err"]{color:#8A2E1E}
+.form-msg{font-size:.92rem;flex-basis:100%;margin:0}
+.form-msg:empty{display:none}
+.form-msg[data-state]{display:flex;gap:12px;align-items:flex-start;padding:14px 18px;border:1px solid;border-radius:2px;line-height:1.5}
+.form-msg[data-state]::before{flex:none;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:.75rem;font-weight:500;margin-top:1px;color:#fff}
+.form-msg[data-state="ok"]{background:#E6ECDC;border-color:#C9D4B9;color:#3F5636}
+.form-msg[data-state="ok"]::before{content:"\2713";background:#5E7A52}
+.form-msg[data-state="err"]{background:#F5E3DD;border-color:#E3C3B8;color:#7A2E22}
+.form-msg[data-state="err"]::before{content:"!";background:#9A4A3A}
 
 /* Footer */
 .foot{background:var(--espresso);color:var(--leinen)}
