@@ -19,6 +19,7 @@ Statische Website für **Bèauty by K – Katharina Baumbach** (Wimpern & Brauen
 
 ## Regeln
 - Keine externen Schriften, Skripte, Tracker oder Einbettungen (Google Fonts, Maps-iframes, Instagram-Embeds). Die Seite setzt keine Cookies und hat deshalb keinen Cookie-Banner – neue Dienste immer erst in `datenschutz.html` aufnehmen.
+- Kontaktweg-Priorität: 1. Instagram-Direktnachricht (https://ig.me/m/beauty_by_katharina), 2. E-Mail/Formular. Buttons immer in dieser Reihenfolge.
 - Kontaktformular läuft über Web3Forms (`W3F_KEY` im Skript am Ende von `index.html`). Empfänger: info@beautybyk.de.
 - Preise stehen an mehreren Stellen: Startseite (Kacheln, `.looks-note`, `#preise`, Bildunterschriften, FAQ, JSON-LD `hasOfferCatalog`), die jeweilige Behandlungsseite (Keyfacts, Preis, FAQ, JSON-LD) und `llms.txt`. Bei Preisänderungen alle Stellen anpassen.
 - Netlify kürzt Links automatisch (`/impressum` statt `impressum.html`) – JS darf sich nicht auf exakte `href`-Werte verlassen.
