@@ -1,0 +1,28 @@
+/* Mobiles Menü (Startseite + Behandlungsseiten) */
+.menu-btn{display:none}
+@media (max-width:920px){
+  .nav{gap:10px}
+  .menu-btn{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;width:46px;height:46px;flex:none;
+    background:transparent;border:1px solid var(--line);border-radius:2px;cursor:pointer;color:var(--espresso);padding:0}
+  .menu-btn span{display:block;width:20px;height:1.5px;background:currentColor;transition:transform .25s ease}
+  .menu-btn[aria-expanded="true"] span:first-child{transform:translateY(4.25px) rotate(45deg)}
+  .menu-btn[aria-expanded="true"] span:last-child{transform:translateY(-4.25px) rotate(-45deg)}
+}
+.mnav{position:fixed;left:0;right:0;bottom:0;top:calc(72px + env(safe-area-inset-top,0px));z-index:49;background:var(--leinen);
+  overflow-y:auto;overscroll-behavior:contain;
+  padding:24px max(16px,env(safe-area-inset-right,0px)) calc(32px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));
+  animation:mnav-in .22s ease-out}
+.mnav[hidden]{display:none}
+@keyframes mnav-in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.mnav-main{list-style:none;margin:0;padding:0;border-top:1px solid var(--espresso)}
+.mnav-main > li{border-bottom:1px solid var(--line)}
+.mnav-main > li > a{display:block;padding:15px 0;font-family:var(--f-display);font-size:1.85rem;line-height:1.15;letter-spacing:.02em;text-decoration:none;color:var(--espresso)}
+.mnav-sub{list-style:none;margin:-6px 0 12px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.mnav-sub a{display:block;padding:9px 0;font-size:.95rem;text-decoration:none;color:var(--taupe)}
+.mnav-cta{display:flex;flex-direction:column;gap:10px;margin-top:26px}
+.mnav-cta .btn{width:100%}
+.mnav-meta{margin:22px 0 0;font-size:.88rem;line-height:1.6;color:var(--taupe)}
+html.menu-open{overflow:hidden}
+html.menu-open .mbar{display:none}
+@media (min-width:921px){.mnav{display:none}}
+@media (prefers-reduced-motion:reduce){.mnav{animation:none}.menu-btn span{transition:none}}

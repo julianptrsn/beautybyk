@@ -121,3 +121,17 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .foot nav{display:flex;flex-wrap:wrap;gap:20px}
 .foot a{text-decoration:none}
 .foot a:hover{text-decoration:underline}
+
+/* Mobile Kontaktleiste */
+.mbar{display:none}
+@media (max-width:700px){
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:55;
+    background:rgba(239,231,221,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);
+    padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+  .mbar .btn{min-height:46px;padding:0 10px;letter-spacing:.16em}
+  .foot .wrap{padding-bottom:96px}
+  .intro-actions .btn{flex:1 1 100%}
+  .cta .btn{flex:1 1 100%}
+  .more a{font-size:1.35rem}
+  .keyfacts b{font-size:1.45rem}
+}

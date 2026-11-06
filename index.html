@@ -512,6 +512,45 @@ dialog.legal::backdrop{background:rgba(58,44,36,.28);backdrop-filter:blur(10px);
 @media (max-width:600px){.legal-head{padding:16px 18px}.legal-body{padding:4px 18px 28px}dialog.legal{max-height:90vh}}
 html.legal-open{overflow:hidden}
 </style>
+<style>
+/* ===== Mobile-Optimierung ===== */
+@media (max-width:560px){
+  /* Behandlungen: Bild links, Text rechts – eindeutig zusammengehörig */
+  .treat-grid{gap:0;border-top:1px solid var(--espresso)}
+  .treat{display:grid;grid-template-columns:116px minmax(0,1fr);grid-template-areas:"pic meta" "pic text" "pic more";
+    column-gap:16px;row-gap:6px;align-items:start;padding:18px 0;border-bottom:1px solid var(--line)}
+  .treat .pic{grid-area:pic;width:116px}
+  .treat .meta{grid-area:meta;border-top:0;padding-top:0;flex-direction:column;align-items:flex-start;gap:2px}
+  .treat h3{font-size:1.4rem;line-height:1.1}
+  .treat .price{font-size:.86rem;color:var(--taupe)}
+  .treat p{grid-area:text;font-size:.9rem;line-height:1.55}
+  .treat .more-link{grid-area:more;margin-top:4px}
+}
+@media (max-width:700px){
+  /* Wimpernverlängerung: Überschrift über dem Bild, klarer Abstand zwischen den Looks */
+  .looks{gap:52px}
+  .look{gap:14px}
+  .look h3{order:-1;flex-wrap:wrap;row-gap:2px;border-top:1px solid #56463B;padding-top:16px}
+  .looks-note{margin-top:36px}
+  /* Vorher/Nachher: Bildunterschrift untereinander, mehr Abstand */
+  .ba{gap:44px}
+  .ba figcaption{flex-direction:column;gap:2px}
+  .ba .lbl{font-size:.62rem;padding:5px 8px}
+  .ba figure.pb .lbl-n{left:12px!important;top:calc(50% + 12px)!important}
+  /* Angebote: Prägung kleiner, damit sie nicht in den Button läuft */
+  .offer{padding:28px 22px}
+  .offer .k{width:110px;right:-24px;bottom:-30px;opacity:.7}
+  /* Überschriften-Blöcke enger */
+  .sec-head{margin-bottom:36px;gap:16px}
+  .lead{font-size:1.04rem}
+  /* Kontakt: Formular volle Breite, Buttons volle Breite */
+  .contact-info .btn{align-self:stretch!important}
+  .form-actions .btn{width:100%}
+  /* Footer-Links größer antippbar */
+  .foot-bottom nav a,.foot-top a{display:inline-block;padding:4px 0}
+}
+</style>
+<link rel="stylesheet" href="media/menu.css">
 </head>
 <body>
 
@@ -615,11 +654,11 @@ html.legal-open{overflow:hidden}
           </div>
           <figcaption><strong>Wimpernlifting</strong><span>inkl. Schwarzfärben · hält 6–8 Wochen</span></figcaption>
         </figure>
-        <figure class="wide">
+        <figure class="wide pb">
           <div class="shot">
-            <img src="media/powderbrows_vorher-nachher.webp" alt="Augenbraue vor und nach Powder Brows: links lichte, feine Härchen, rechts eine weich schattierte, gleichmäßige Braue" loading="lazy" width="2008" height="560">
+            <picture><source media="(max-width:700px)" srcset="media/powderbrows_kachel.webp" width="1000" height="1250"><img src="media/powderbrows_vorher-nachher.webp" alt="Augenbraue vor und nach Powder Brows: links lichte, feine Härchen, rechts eine weich schattierte, gleichmäßige Braue" loading="lazy" width="2008" height="560"></picture>
             <span class="lbl" style="left:12px;top:12px">Vorher</span>
-            <span class="lbl" style="left:calc(50% + 16px);top:12px">Nachher</span>
+            <span class="lbl lbl-n" style="left:calc(50% + 16px);top:12px">Nachher</span>
           </div>
           <figcaption><strong>Powder Brows</strong><span>Permanent Make-up · Pudertechnik</span></figcaption>
         </figure>
@@ -999,5 +1038,6 @@ html.legal-open{overflow:hidden}
 })();
 </script>
 
+<script src="media/menu.js" defer></script>
 </body>
 </html>

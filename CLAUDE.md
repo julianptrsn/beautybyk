@@ -5,6 +5,7 @@ Statische Website für **Bèauty by K – Katharina Baumbach** (Wimpern & Brauen
 ## Dateien
 - `index.html` – Startseite (Onepager), CSS und JS inline; Impressum/Datenschutz öffnen dort als Popup (`dialog.legal`)
 - `wimpernverlaengerung-flensburg.html`, `wimpernlifting-flensburg.html`, `browlifting-flensburg.html`, `powder-brows-flensburg.html` – Behandlungsseiten (SEO), Styles aus `media/seite.css`, je mit JSON-LD (Service, FAQPage, BreadcrumbList)
+- `media/menu.css`, `media/menu.js` – mobiles Menü (Burger ≤ 920 px) für Startseite und Behandlungsseiten; Menüpunkte stehen in `menu.js`
 - `llms.txt` – Kurzfassung für KI-Suchen (Preise/Fakten synchron halten)
 - `impressum.html`, `datenschutz.html` – Rechtstexte, Styles aus `media/recht.css`
 - `media/` – Fotos (WebP, max. 1400 px), Logos (SVG), `fonts/` (Italiana, Jost, lokal, OFL)
@@ -25,7 +26,7 @@ Statische Website für **Bèauty by K – Katharina Baumbach** (Wimpern & Brauen
 - Netlify kürzt Links automatisch (`/impressum` statt `impressum.html`) – JS darf sich nicht auf exakte `href`-Werte verlassen.
 - Nur auf ausdrückliche Anweisung von Julian pushen (jeder Push = Netlify-Deploy).
 - Neue Fotos: WebP, längste Seite max. 1400 px, mit `width`/`height`-Attributen und aussagekräftigem `alt`-Text.
-- Nach Änderungen auf 390 px Breite prüfen: kein seitliches Scrollen.
+- Nach Änderungen auf 360/390 px Breite prüfen: kein seitliches Scrollen, Menü öffnet/schließt, Bild und Überschrift eindeutig zusammengehörig.
 - Nur Fakten verwenden, die Katharina bestätigt hat – keine erfundenen Aussagen, Bewertungen oder Zahlen.
 
 ## Fakten
