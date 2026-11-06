@@ -32,4 +32,4 @@ Statische Website für **Bèauty by K – Katharina Baumbach** (Wimpern & Brauen
 - Adresse: Europastraße 49 A, 24976 Handewitt (OT Jarplund), direkt an der Stadtgrenze Flensburg
 - Keine Telefonnummer (gibt es nicht mehr) · info@beautybyk.de · Instagram @beauty_by_katharina
 - Termine nach Vereinbarung
-- Seit 2017 Wimpern/Brauen, selbstständig seit 2019, Powder-Brows-Ausbildung 2022 bei Xixibeauty, Beratung auch auf Russisch
+- Seit 2017 Wimpern/Brauen, selbstständig seit 2019, Powder-Brows-Ausbildung 2020 bei Xixibeauty, Beratung auch auf Russisch
