@@ -1,0 +1,6 @@
+# GitHub Pages: statische Seite, Jekyll kopiert nur die Dateien.
+# Diese Dateien gehören ins Repository, aber nicht auf die Website:
+exclude:
+  - CLAUDE.md
+  - README.md
+  - .gitignore

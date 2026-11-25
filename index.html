@@ -935,15 +935,15 @@ html.legal-open{overflow:hidden}
     </ul>
 
     <h2>3. Hosting</h2>
-    <p>Diese Website wird bei Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, USA gehostet. Beim Aufruf der Website verarbeitet Netlify technisch notwendige Daten, damit die Seite ausgeliefert werden kann, insbesondere:</p>
+    <p>Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (ein Tochterunternehmen der Microsoft Corporation). Beim Aufruf der Website verarbeitet GitHub technisch notwendige Daten, damit die Seite ausgeliefert werden kann, insbesondere:</p>
     <ul>
       <li>IP-Adresse des aufrufenden Geräts,</li>
       <li>Datum und Uhrzeit des Zugriffs,</li>
       <li>aufgerufene Seite bzw. Datei,</li>
       <li>Browsertyp, Betriebssystem und Referrer-URL.</li>
     </ul>
-    <p>Diese Daten dienen der sicheren und stabilen Bereitstellung der Website und werden nicht mit anderen Daten zusammengeführt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; mein berechtigtes Interesse liegt in einer technisch fehlerfreien und sicheren Website.</p>
-    <p>Mit Netlify besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO. Da Netlify seinen Sitz in den USA hat, können Daten in die USA übermittelt werden. Die Übermittlung erfolgt auf Grundlage der EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO).</p>
+    <p>Laut GitHub wird die IP-Adresse von Besucherinnen und Besuchern aus Sicherheitsgründen protokolliert und gespeichert. Ich selbst erhalte keinen Zugriff auf diese Daten und führe sie nicht mit anderen Daten zusammen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; mein berechtigtes Interesse liegt in einer technisch fehlerfreien und sicheren Website.</p>
+    <p>Da GitHub seinen Sitz in den USA hat, können Daten in die USA übermittelt werden. GitHub stützt solche Übermittlungen nach eigenen Angaben auf das EU-US Data Privacy Framework sowie auf die EU-Standardvertragsklauseln (Art. 45 bzw. Art. 46 Abs. 2 lit. c DSGVO). Weitere Informationen findest du in der Datenschutzerklärung von GitHub: https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement</p>
 
     <h2>4. Anfrageformular</h2>
     <p>Wenn du mir über das Formular eine Anfrage schickst, verarbeite ich die Angaben, die du einträgst: Name, E-Mail-Adresse, optional Telefonnummer, gewünschte Behandlung, Wunschtermin und deine Nachricht.</p>
@@ -1010,7 +1010,7 @@ html.legal-open{overflow:hidden}
     }
     // Web3Forms Access Key (öffentlich, gehört zu info@beautybyk.de) – auf web3forms.com erstellen und hier eintragen
     var W3F_KEY='1f521f63-35dd-4ae5-9a96-6378817ff087';
-    var live=/(^|\.)beautybyk\.de$|\.netlify\.app$/.test(location.hostname);
+    var live=/(^|\.)beautybyk\.de$|\.github\.io$/.test(location.hostname);
     if(!live){ msg.dataset.state='ok'; msg.textContent='Vorschau: Auf der Live-Seite geht diese Anfrage direkt an info@beautybyk.de.'; return; }
     if(form.elements.botcheck.checked) return;
     var data=Object.fromEntries(new FormData(form)); data.access_key=W3F_KEY; delete data.botcheck;

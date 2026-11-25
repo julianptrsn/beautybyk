@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seite nicht gefunden | Bèauty by K</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/media/monogramm.svg" type="image/svg+xml">
+<script>
+  // Alte Adressen der früheren Website auf die neuen Bereiche umleiten
+  (function(){
+    var map={
+      '/index.php':'/',
+      '/leistungen.php':'/#behandlungen',
+      '/salon.php':'/#studio',
+      '/kontakt.php':'/#kontakt',
+      '/impressum.php':'/impressum',
+      '/datenschutz.php':'/datenschutz'
+    };
+    var p=location.pathname.toLowerCase().replace(/\/+$/,'');
+    if(map[p]){ location.replace(map[p]); }
+  })();
+</script>
+<link rel="stylesheet" href="/media/seite.css">
+<style>
+  .nf{min-height:calc(100svh - 72px - 80px);display:grid;place-items:center;position:relative;overflow:hidden;text-align:center}
+  .nf .k{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);height:120%;width:auto;max-width:none;pointer-events:none;
+    filter:drop-shadow(-2px -2px 1.5px rgba(255,255,255,.75)) drop-shadow(3px 4px 5px rgba(110,92,74,.28))}
+  .nf .inner{position:relative;display:flex;flex-direction:column;align-items:center;gap:22px;padding-block:72px;max-width:560px}
+  .nf .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+  @media (max-width:560px){.nf .actions .btn{flex:1 1 100%}}
+</style>
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Bèauty by K – Startseite">
+      <img class="mono" src="/media/monogramm-header.svg" alt="" width="36" height="48">
+      <img class="word" src="/media/wortmarke-header.svg" alt="Bèauty by K" width="290" height="22">
+    </a>
+  </div>
+</header>
+<main class="nf">
+  <img class="k" src="/media/k-gross.svg" alt="" aria-hidden="true">
+  <div class="wrap inner">
+    <p class="eyebrow">Seite nicht gefunden</p>
+    <h1>Diese Seite gibt es nicht mehr.</h1>
+    <p class="lead">Vielleicht hat sich die Adresse geändert. Auf der Startseite findest du alle Behandlungen, Preise und wie du mich erreichst.</p>
+    <div class="actions">
+      <a class="btn btn-dark" href="/">Zur Startseite</a>
+      <a class="btn btn-line" href="https://ig.me/m/beauty_by_katharina" target="_blank" rel="noopener">Nachricht auf Instagram</a>
+    </div>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 Bèauty by K · Katharina Baumbach</span>
+    <nav aria-label="Rechtliches"><a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a></nav>
+  </div>
+</footer>
+</body>
+</html>

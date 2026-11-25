@@ -1,6 +1,6 @@
 # beautybyk.de – Hinweise für Änderungen
 
-Statische Website für **Bèauty by K – Katharina Baumbach** (Wimpern & Brauen, Flensburg-Jarplund). Gehostet auf Netlify, automatisches Deployment bei jedem Push auf `main`. Kein Build-Schritt, Publish-Verzeichnis ist das Repo-Root.
+Statische Website für **Bèauty by K – Katharina Baumbach** (Wimpern & Brauen, Flensburg-Jarplund). Gehostet auf **GitHub Pages** (öffentliches Repo `julianptrsn/beautybyk`, Branch `main`, Ordner `/`), automatisches Deployment bei jedem Push auf `main`. Domain beautybyk.de über Datei `CNAME`; DNS bei Strato. Kein eigener Build-Schritt (Jekyll kopiert nur, `_config.yml` schließt CLAUDE.md/README.md aus).
 
 ## Dateien
 - `index.html` – Startseite (Onepager), CSS und JS inline; Impressum/Datenschutz öffnen dort als Popup (`dialog.legal`)
@@ -9,7 +9,9 @@ Statische Website für **Bèauty by K – Katharina Baumbach** (Wimpern & Brauen
 - `llms.txt` – Kurzfassung für KI-Suchen (Preise/Fakten synchron halten)
 - `impressum.html`, `datenschutz.html` – Rechtstexte, Styles aus `media/recht.css`
 - `media/` – Fotos (WebP, max. 1400 px), Logos (SVG), `fonts/` (Italiana, Jost, lokal, OFL)
-- `_redirects` – 301-Weiterleitungen der alten PHP-Adressen
+- `404.html` – Fehlerseite; leitet alte PHP-Adressen (`leistungen.php` usw.) per Skript auf die neuen Bereiche um (GitHub Pages kann keine Server-Weiterleitungen)
+- `CNAME` – Domain für GitHub Pages, nicht löschen
+- `_redirects` – Altlast von Netlify, wird auf GitHub Pages ignoriert
 - `robots.txt`, `sitemap.xml` – bei neuen Seiten `sitemap.xml` ergänzen und `lastmod` aktualisieren
 
 ## Marke
@@ -23,8 +25,9 @@ Statische Website für **Bèauty by K – Katharina Baumbach** (Wimpern & Brauen
 - Kontaktweg-Priorität: 1. Instagram-Direktnachricht (https://ig.me/m/beauty_by_katharina), 2. E-Mail/Formular. Buttons immer in dieser Reihenfolge.
 - Kontaktformular läuft über Web3Forms (`W3F_KEY` im Skript am Ende von `index.html`). Empfänger: info@beautybyk.de.
 - Preise stehen an mehreren Stellen: Startseite (Kacheln, `.looks-note`, `#preise`, Bildunterschriften, FAQ, JSON-LD `hasOfferCatalog`), die jeweilige Behandlungsseite (Keyfacts, Preis, FAQ, JSON-LD) und `llms.txt`. Bei Preisänderungen alle Stellen anpassen.
-- Netlify kürzt Links automatisch (`/impressum` statt `impressum.html`) – JS darf sich nicht auf exakte `href`-Werte verlassen.
-- Nur auf ausdrückliche Anweisung von Julian pushen (jeder Push = Netlify-Deploy).
+- Seiten sind auch ohne `.html` erreichbar (`/impressum`) – JS darf sich nicht auf exakte `href`-Werte verlassen.
+- Das Repo ist öffentlich: keine Zugangsdaten, privaten Daten oder unveröffentlichten Infos committen.
+- Nur auf ausdrückliche Anweisung von Julian pushen (jeder Push geht sofort live).
 - Neue Fotos: WebP, längste Seite max. 1400 px, mit `width`/`height`-Attributen und aussagekräftigem `alt`-Text.
 - Nach Änderungen auf 360/390 px Breite prüfen: kein seitliches Scrollen, Menü öffnet/schließt, Bild und Überschrift eindeutig zusammengehörig.
 - Nur Fakten verwenden, die Katharina bestätigt hat – keine erfundenen Aussagen, Bewertungen oder Zahlen.
